@@ -4,6 +4,9 @@ This project contains a small script `query_disk.py` that uses the `redfish` Pyt
 
 The instructions below use only `python` and `python -m` commands so you can run everything directly with Python. You don't need PowerShell-specific features or activation if you prefer to invoke the venv Python executable directly.
 
+Provided as-is, no warranty or support
+hardev@nutanix.com May 2026
+
 ## Prerequisites
 
 - Python 3.8 or newer installed and on your PATH. Check with:
