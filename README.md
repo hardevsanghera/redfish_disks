@@ -46,16 +46,16 @@ Examples (set environment variables before running):
 
 # Windows (Command Prompt / CMD)
 ```cmd
-set ILO_IP=10.38.243.33
-set ILO_USER=ADMIN
+set ILO_IP=10.10.10.11
+set ILO_USER=Adminuser
 set ILO_PASS=YourSecretPassword
 .venv\Scripts\python.exe query_disk.py --output-csv drives.csv --any-size
 ```
 
 # macOS / Linux / Git Bash / WSL
 ```bash
-export ILO_IP=10.38.243.33
-export ILO_USER=ADMIN
+export ILO_IP=10.10.10.11
+export ILO_USER=Adminuser
 export ILO_PASS=YourSecretPassword
 .venv/bin/python query_disk.py --output-csv drives.csv --any-size
 ```
@@ -63,7 +63,7 @@ export ILO_PASS=YourSecretPassword
 If you prefer not to set env vars, pass the password interactively or on the CLI (less secure):
 
 ```bash
-.venv/bin/python query_disk.py --ilo 10.38.243.33 --user ADMIN --password "YourSecretPassword" --output-csv drives.csv --any-size
+.venv/bin/python query_disk.py --ilo 10.10.10.11 --user Adminuser --password "YourSecretPassword" --output-csv drives.csv --any-size
 ```
 
 ## Run the script
@@ -71,10 +71,10 @@ If you prefer not to set env vars, pass the password interactively or on the CLI
 You can run the script directly with your system Python or the venv Python. Using the venv python executable avoids the need to activate the venv in your shell (handy in scripts or automation).
 
 # Run with the venv python (Windows)
-.venv\Scripts\python.exe query_disk.py --ilo 10.38.243.33 --user ADMIN --any-size --output-csv .\drives.csv
+.venv\Scripts\python.exe query_disk.py --ilo 10.10.10.11 --user Adminuser --any-size --output-csv .\drives.csv
 
 # Run with the venv python (macOS / Linux)
-.venv/bin/python query_disk.py --ilo 10.38.243.33 --user ADMIN --any-size --output-csv ./drives.csv
+.venv/bin/python query_disk.py --ilo 10.10.10.11 --user Adminuser --any-size --output-csv ./drives.csv
 
 Or, if you activated the venv in your shell, you can run simply:
 
@@ -122,7 +122,7 @@ Notes:
 Below is an example PowerShell session showing a typical run on Windows. The command and the resulting output are shown exactly as produced by the script in a test run:
 
 ```powershell
-python .\query_disk.py --ilo 10.38.243.33 --user ADMIN --verbose --any-size --output-csv .\drives.csv
+python .\query_disk.py --ilo 10.10.10.11 --user Adminuser --verbose --any-size --output-csv .\drives.csv
 Login response: None
 Root service object keys: ['@odata.context', '@odata.etag', '@odata.id', '@odata.type', 'Id', 'AccountService', 'CertificateService', 'Chassis', 'EventService', 'Fabrics', 'JsonSchemas', 'Links', 'Managers', 'Name', 'Oem', 'Product', 'ProtocolFeaturesSupported', 'RedfishVersion', 'Registries', 'SessionService', 'Systems', 'Tasks', 'TelemetryService', 'UUID', 'UpdateService', 'Vendor']
 Found systems members: 1
@@ -136,7 +136,7 @@ Any-size mode: showing all discovered drives (no capacity filter)
 Drive object dump:
 {
   "@odata.context": "/redfish/v1/$metadata#Drive.Drive",
-  "@odata.etag": "W/\"67E86D92\"",
+  "@odata.etag": "W/\"67EABCDE\"",
   "@odata.id": "/redfish/v1/Systems/1/Storage/DA000004/Drives/DDC16951/",
   "@odata.type": "#Drive.v1_16_0.Drive",
   "Id": "DDC16951",
@@ -233,5 +233,5 @@ Counts by model:
   MK001920GWSSE: 6
   MR000240GWFLU: 1
 Wrote 7 rows to .\drives.csv
-(.venv) PS C:\Users\hardev.sanghera\Documents\Redfish>
+(.venv) PS C:\Users\user1\Documents
 ```
