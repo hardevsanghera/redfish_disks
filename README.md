@@ -2,7 +2,7 @@
 
 This project contains a small script `query_disk.py` that uses the `redfish` Python library to query storage drive information from an iLO / Redfish-enabled system.
 
-The instructions below use only `python` and `python -m` commands so you can run everything directly with Python. You don't need PowerShell-specific features or activation if you prefer to invoke the venv Python executable directly.
+The instructions below use only `python` and `python -m` commands so you can run everything directly with Python.
 
 Provided as-is, no warranty or support
 hardev@nutanix.com May 2026
