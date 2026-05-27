@@ -122,7 +122,7 @@ Notes:
 
 ## Example Run (Windows)
 
-Below is an example PowerShell session showing a typical run on Windows. The command and the resulting output are shown exactly as produced by the script in a test run:
+Below is an example PowerShell/Python session showing a typical run on Windows. The command and the resulting output are shown exactly as produced by the script in a test run:
 
 ```powershell
 python .\query_disk.py --ilo 10.10.10.11 --user Adminuser --verbose --any-size --output-csv .\drives.csv
