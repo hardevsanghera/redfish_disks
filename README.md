@@ -49,9 +49,9 @@ Examples (set environment variables before running):
 
 # Windows (Command Prompt / CMD)
 ```cmd
-set ILO_IP=10.10.10.11
-set ILO_USER=Adminuser
-set ILO_PASS=YourSecretPassword
+$env:ILO_IP   = "10.10.10.11"
+$env:ILO_USER = "userid"
+$env:ILO_PASS = "secret"
 .venv\Scripts\python.exe query_disk.py --output-csv drives.csv --any-size
 ```
 
