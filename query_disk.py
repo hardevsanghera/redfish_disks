@@ -1,7 +1,7 @@
-""" Provided as-is, no warranty or support
-""" hardev@nutanix.com
-""" May 2026
-"""
+# Provided as-is, no warranty or support
+# hardev@nutanix.com
+# May 2026
+#
 import os
 import argparse
 import redfish
